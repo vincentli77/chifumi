@@ -4,7 +4,7 @@
         <img class="logo" src="../assets/logo.svg">
         <div class="score">
           <p>SCORE</p>
-          <span>12</span>
+          <span>{{wine}}</span>
         </div>
     </div>
   </div>
@@ -14,8 +14,9 @@
 export default {
   name: 'Score',
   props: {
-    msg: String
-  }
+    msg: String,
+    wine:Number
+  },
 }
 </script>
 

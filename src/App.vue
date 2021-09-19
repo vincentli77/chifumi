@@ -1,6 +1,6 @@
 <template>
-  <Score msg="Welcome to Your Vue.js App"/>
-  <Game/>
+  <Score :wine="this.wine" msg="Welcome to Your Vue.js App"/>
+  <Game @win="win"/>
 </template>
 
 <script>
@@ -12,7 +12,20 @@ export default {
   components: {
     Score,
     Game
-  }
+  },
+    methods: {
+    win(){
+      this.wine=this.wine+1
+      
+    }
+  },
+  data() {
+    return {
+      wine: 0
+    }
+  },
+
+
 }
 </script>
 
